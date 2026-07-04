@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 880 360" role="img" aria-label="Audit workflow">
+  <title>lovable-audit workflow</title>
+  <desc>How the lovable-audit CLI turns a repo into a markdown risk report across four steps.</desc>
+  <style>
+    .bg { fill: #ffffff; }
+    .box { fill: #ffffff; stroke: #1f2937; stroke-width: 1.25; }
+    .accent { fill: #ecfeff; stroke: #0e7490; stroke-width: 1.25; }
+    .title { font: 600 14px system-ui, sans-serif; fill: #0f172a; }
+    .body { font: 12px system-ui, sans-serif; fill: #334155; }
+    .small { font: 11px system-ui, sans-serif; fill: #475569; }
+    .arrow { stroke: #1f2937; stroke-width: 1.5; fill: none; marker-end: url(#a); }
+    .label { font: 11px ui-monospace, monospace; fill: #64748b; }
+  </style>
+  <defs>
+    <marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
+      <path d="M0 0 L10 5 L0 10 z" fill="#1f2937" />
+    </marker>
+  </defs>
+  <rect class="bg" width="880" height="360" />
+  <text class="title" x="20" y="28">Audit workflow</text>
+  <text class="small" x="20" y="46">Input → static analysis → triage → roadmap</text>
+
+  <!-- Step 1: repo -->
+  <g transform="translate(40,90)">
+    <rect class="box" width="160" height="80" rx="8" />
+    <text class="title" x="14" y="24">Repo</text>
+    <text class="body" x="14" y="46">Next.js + Supabase</text>
+    <text class="body" x="14" y="62">+ Lovable UI</text>
+    <text class="small" x="14" y="78">fixtures/sample_lovable_repo</text>
+  </g>
+
+  <!-- Step 2: CLI -->
+  <g transform="translate(260,90)">
+    <rect class="accent" width="200" height="80" rx="8" />
+    <text class="title" x="14" y="24">lovable-audit CLI</text>
+    <text class="body" x="14" y="46">• risk_patterns</text>
+    <text class="body" x="14" y="62">• security_checks</text>
+    <text class="body" x="14" y="78">• architecture_checks</text>
+  </g>
+
+  <!-- Step 3: report -->
+  <g transform="translate(520,90)">
+    <rect class="box" width="200" height="80" rx="8" />
+    <text class="title" x="14" y="24">report.md</text>
+    <text class="body" x="14" y="46">Findings grouped by</text>
+    <text class="body" x="14" y="62">architecture / security</text>
+    <text class="body" x="14" y="78">/ testing / gdpr</text>
+  </g>
+
+  <!-- Step 4: triage -->
+  <g transform="translate(260,220)">
+    <rect class="box" width="200" height="80" rx="8" />
+    <text class="title" x="14" y="24">risk_register.md</text>
+    <text class="body" x="14" y="46">fill in: severity, owner,</text>
+    <text class="body" x="14" y="62">target date, status</text>
+    <text class="small" x="14" y="78">fix-now · fix-next · accept-risk</text>
+  </g>
+
+  <!-- Step 5: launch -->
+  <g transform="translate(520,220)">
+    <rect class="box" width="200" height="80" rx="8" />
+    <text class="title" x="14" y="24">production_readiness</text>
+    <text class="body" x="14" y="46">deploy / obs / errors</text>
+    <text class="body" x="14" y="62">security / gdpr / tests</text>
+    <text class="small" x="14" y="78">launch gate</text>
+  </g>
+
+  <!-- arrows -->
+  <path class="arrow" d="M200 130 H 260" />
+  <path class="arrow" d="M460 130 H 520" />
+  <path class="arrow" d="M620 170 V 220" />
+  <path class="arrow" d="M460 260 H 520" />
+
+  <!-- labels -->
+  <text class="label" x="200" y="120">point at</text>
+  <text class="label" x="460" y="120">emits</text>
+  <text class="label" x="630" y="200">triage in</text>
+  <text class="label" x="460" y="250">gates launch</text>
+</svg>

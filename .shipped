@@ -1,0 +1,6 @@
+{
+  "shipped_at": "2026-07-04T21:25:00Z",
+  "github_url": "https://github.com/9KMan/JOB-20260704130000-000131",
+  "shipped_by": "Software Factory",
+  "notes": "PoC scaffold attached to bid JOB-131. 41 pytest cases pass. Lovable-audit CLI + Next.js demo (mocked LLM) + 3 templates + 3 SVGs. Pitfall 11 sentinel \u2014 do NOT allow gsd-build.py to overwrite this shipped dir."
+}

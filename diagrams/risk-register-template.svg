@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 880 480" role="img" aria-label="Risk register template">
+  <title>Risk register template</title>
+  <desc>How the markdown risk register template maps findings to owners, dates, and decisions.</desc>
+  <style>
+    .bg { fill: #ffffff; }
+    .title { font: 600 14px system-ui, sans-serif; fill: #0f172a; }
+    .body { font: 12px system-ui, sans-serif; fill: #334155; }
+    .small { font: 11px system-ui, sans-serif; fill: #475569; }
+    .head { fill: #e2e8f0; stroke: #1f2937; stroke-width: 1; }
+    .row { fill: #ffffff; stroke: #1f2937; stroke-width: 0.75; }
+    .row-alt { fill: #f8fafc; stroke: #1f2937; stroke-width: 0.75; }
+    .sevH { fill: #fee2e2; stroke: #b91c1c; stroke-width: 1; }
+    .sevM { fill: #fef3c7; stroke: #b45309; stroke-width: 1; }
+    .sevL { fill: #dcfce7; stroke: #15803d; stroke-width: 1; }
+    .text { font: 11px system-ui, sans-serif; fill: #0f172a; }
+    .mono { font: 11px ui-monospace, monospace; fill: #475569; }
+  </style>
+  <rect class="bg" width="880" height="480" />
+
+  <text class="title" x="20" y="28">Risk register — template</text>
+  <text class="small" x="20" y="46">Each row represents one finding. Tick status; record owner + target.</text>
+
+  <!-- header -->
+  <g transform="translate(20,80)">
+    <rect class="head" width="840" height="28" />
+    <text class="text" x="10" y="18">#</text>
+    <text class="text" x="40" y="18">Sev</text>
+    <text class="text" x="100" y="18">Category</text>
+    <text class="text" x="190" y="18">ID</text>
+    <text class="text" x="240" y="18">Location (file:line)</text>
+    <text class="text" x="420" y="18">Observation</text>
+    <text class="text" x="560" y="18">Owner</text>
+    <text class="text" x="640" y="18">Action</text>
+    <text class="text" x="740" y="18">Target</text>
+  </g>
+
+  <!-- row 1: high -->
+  <g transform="translate(20,108)">
+    <rect class="row" width="840" height="40" />
+    <text class="text" x="10" y="24">1</text>
+    <rect class="sevH" x="40" y="8" width="42" height="20" rx="3" />
+    <text class="text" x="50" y="22">high</text>
+    <text class="text" x="100" y="24">security</text>
+    <text class="mono" x="190" y="24">SECRET-OPENAI</text>
+    <text class="text" x="240" y="24">lib/llm/client.ts:14</text>
+    <text class="text" x="420" y="24">hard-coded OpenAI key</text>
+    <text class="text" x="560" y="24">@product-eng</text>
+    <text class="text" x="640" y="24">fix-now</text>
+    <text class="text" x="740" y="24">2026-07-08</text>
+  </g>
+
+  <!-- row 2: medium -->
+  <g transform="translate(20,148)">
+    <rect class="row-alt" width="840" height="40" />
+    <text class="text" x="10" y="24">2</text>
+    <rect class="sevM" x="40" y="8" width="60" height="20" rx="3" />
+    <text class="text" x="52" y="22">medium</text>
+    <text class="text" x="100" y="24">architecture</text>
+    <text class="mono" x="190" y="24">ARCH-NO-DATA-LAYER</text>
+    <text class="text" x="240" y="24">repo</text>
+    <text class="text" x="420" y="24">pages import @supabase/supabase-js</text>
+    <text class="text" x="560" y="24">@tech-lead</text>
+    <text class="text" x="640" y="24">fix-next-sprint</text>
+    <text class="text" x="740" y="24">2026-07-15</text>
+  </g>
+
+  <!-- row 3: medium -->
+  <g transform="translate(20,188)">
+    <rect class="row" width="840" height="40" />
+    <text class="text" x="10" y="24">3</text>
+    <rect class="sevM" x="40" y="8" width="60" height="20" rx="3" />
+    <text class="text" x="52" y="22">medium</text>
+    <text class="text" x="100" y="24">testing</text>
+    <text class="mono" x="190" y="24">TEST-COV-LOW-FILE</text>
+    <text class="text" x="240" y="24">lib/db/booking.ts</text>
+    <text class="text" x="420" y="24">12/40 lines covered</text>
+    <text class="text" x="560" y="24">@tech-lead</text>
+    <text class="text" x="640" y="24">fix-next-sprint</text>
+    <text class="text" x="740" y="24">2026-07-22</text>
+  </g>
+
+  <!-- row 4: low -->
+  <g transform="translate(20,228)">
+    <rect class="row-alt" width="840" height="40" />
+    <text class="text" x="10" y="24">4</text>
+    <rect class="sevL" x="40" y="8" width="36" height="20" rx="3" />
+    <text class="text" x="50" y="22">low</text>
+    <text class="text" x="100" y="24">architecture</text>
+    <text class="mono" x="190" y="24">ARCH-GOD-FOLDER</text>
+    <text class="text" x="240" y="24">components/</text>
+    <text class="text" x="420" y="24">32 files in one folder</text>
+    <text class="text" x="560" y="24">@product-eng</text>
+    <text class="text" x="640" y="24">accept-risk</text>
+    <text class="text" x="740" y="24">2026-08-01</text>
+  </g>
+
+  <!-- summary boxes -->
+  <g transform="translate(20,290)">
+    <rect class="row" width="270" height="80" />
+    <text class="title" x="14" y="22">Out-of-scope</text>
+    <text class="small" x="14" y="42">Document accepted risks so the team</text>
+    <text class="small" x="14" y="58">doesn't relitigate them next sprint.</text>
+    <text class="mono" x="14" y="74">+ add review date</text>
+  </g>
+  <g transform="translate(310,290)">
+    <rect class="row" width="270" height="80" />
+    <text class="title" x="14" y="22">Sign-off</text>
+    <text class="small" x="14" y="42">Tech lead + Product owner +</text>
+    <text class="small" x="14" y="58">Security reviewer.</text>
+    <text class="mono" x="14" y="74">versioned in repo</text>
+  </g>
+  <g transform="translate(600,290)">
+    <rect class="row" width="260" height="80" />
+    <text class="title" x="14" y="22">How to re-run</text>
+    <text class="small" x="14" y="42">lovable-audit . --out report.md</text>
+    <text class="small" x="14" y="58">diff the report after each sprint.</text>
+    <text class="mono" x="14" y="74">CI-friendly</text>
+  </g>
+
+  <text class="small" x="20" y="430">Generated from <tspan class="mono">templates/risk_register.md</tspan>; fill in the columns for your repo.</text>
+</svg>

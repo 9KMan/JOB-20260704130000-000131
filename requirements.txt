@@ -1,0 +1,16 @@
+# Runtime dependencies. The audit tool itself has zero runtime deps beyond
+# the Python standard library, so this file is intentionally minimal.
+#
+# Keep the CLI runnable on a fresh CPython 3.11+ install with no extras:
+#
+#     python -m lovable_audit.cli <repo> --out report.md
+#
+# `pip install -e .` adds the `lovable-audit` console script entry point.
+
+-r ./requirements-runtime.in
+
+# Test-only dependencies are pulled in by:
+#     uv pip install --python .venv/bin/python -e '.[test]'
+# We still list them here for users who use `pip install -r requirements.txt`.
+pytest>=8
+pytest-cov>=5
